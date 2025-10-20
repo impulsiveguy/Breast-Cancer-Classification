@@ -31,3 +31,35 @@ Each model is optimized using **RandomizedSearchCV** with **Recall as the refit 
 - **ROC Curves** and **AUC evaluation** for best-performing models  
 - Model saving with **Joblib** for future inference  
 
+---
+
+## Model Performance Summary
+
+| Model                | Accuracy | CV Recall | Key Hyperparameters |
+|----------------------|-----------|------------|----------------------|
+| Logistic Regression  | 0.9737    | 0.9643     | C=0.1, L1, balanced  |
+| XGBoost              | 0.9561    | 0.9464     | n=300, depth=3, lr=0.05 |
+| Random Forest        | 0.9561    | 0.9446     | n=300, depth=10 |
+| KNN                  | 0.9649    | 0.9308     | k=7, p=1 |
+| ANN (MLPClassifier)  | 0.9737    | 0.9525     | hidden=(100,), adaptive |
+
+**Best Model (Recall-Focused): Logistic Regression**
+
+---
+
+## Key Visualizations
+
+- **Box plots** and **violin plots** for feature distribution  
+- **Pair plots** showing feature relationships by diagnosis  
+- **Correlation heatmap** identifying key predictive variables  
+- **ROC curves** comparing AUC across models  
+- **Feature importance** for linear and ensemble models  
+
+---
+
+## Dependencies
+
+Install required dependencies using:
+
+```bash
+pip install -r requirements.txt
